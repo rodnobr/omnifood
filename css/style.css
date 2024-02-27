@@ -1,4 +1,3 @@
-
 /* *******************
 HEADER
 ******************* */
@@ -11,6 +10,7 @@ HEADER
   /* because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -24,7 +24,7 @@ NAVIGATION
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 .main-nav-link:visited,
 .main-nav-link:link {
@@ -52,6 +52,26 @@ NAVIGATION
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
+/* *******************
+MOBILE
+******************* */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 
 /* *******************
 HERO SECTION
@@ -223,7 +243,7 @@ MEALS SECTION
 
 .tag {
   display: inline-block;
-  padding: .4rem .8rem;
+  padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #333;
@@ -247,7 +267,7 @@ MEALS SECTION
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .meal:hover {
@@ -258,7 +278,6 @@ MEALS SECTION
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem;
 }
-
 
 .meal-attributes {
   list-style: none;
@@ -339,7 +358,7 @@ TESTIMONIALS SECTION
 .gallery-item img {
   display: block;
   width: 100%;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .gallery-item img:hover {
@@ -409,7 +428,7 @@ PRICING SECTION
 .plan-price span {
   font-size: 3rem;
   font-weight: 500;
-  margin-right: .8px;
+  margin-right: 0.8px;
 }
 
 .plan-text {
@@ -421,10 +440,6 @@ PRICING SECTION
 .plan-signup {
   text-align: center;
   margin-top: 4.8rem;
-}
-
-.feature {
-
 }
 
 .feature-icon {
@@ -460,7 +475,7 @@ CALL TO ACTION SECTION
 ******************* */
 
 .section-cta {
-
+  padding: 4.8rem 0 12.8rem;
 }
 
 .cta {
@@ -469,17 +484,145 @@ CALL TO ACTION SECTION
   background-color: #e67e22;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
-  background-image: linear-gradient(to right bottom, #eb984e, #e67e22 );
-  height: 50rem;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
 }
 
 .cta-text-box {
+  color: #45260a;
+  padding: 4.8rem 6.4rem 6.4rem;
+}
 
+.cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
 }
 
 .cta-img-box {
-  background-image:linear-gradient(to right bottom, rgba(235, 151, 78, 0.3), rgba(230, 125, 34, 0.3) ), url("../img/eating.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.3),
+      rgba(230, 125, 34, 0.3)
+    ),
+    url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  color: inherit;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 9px;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/* *******************
+FOOTER
+******************* */
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  margin-top: auto;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #767676;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
